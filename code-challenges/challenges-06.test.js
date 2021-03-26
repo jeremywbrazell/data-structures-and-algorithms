@@ -90,8 +90,9 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  if (value === obj)
-  return true;
+  let array = Object.values(obj);
+  let answer = array.includes(value) ? true : false;
+  return answer;
 };
 
 /* ------------------------------------------------------------------------------------------------
