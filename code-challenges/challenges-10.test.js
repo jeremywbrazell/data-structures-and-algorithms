@@ -57,8 +57,12 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  // return input.flat(int => {
-  //   int.reduce;
+  let Array = input.flat()
+  let sum = 0;
+  for (let i = 0; i < Array.length; i++) {
+    sum += Array[i];
+  }
+  return sum;
   } 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -72,13 +76,16 @@ This function should then raise 2 to the power of the resulting numbers, returni
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
-// const divisibleByFiveTwoToThePower = (input) => {
-// let Array = [];
-// Array.splice(/\D+/ || );
-
-
-
-// };
+const divisibleByFiveTwoToThePower = (input) => {
+let array = [];
+function rule(item) {return typeof(item) === 'number' && item%5===0}
+let five = input.map(num => num.filter(rule))
+for (let i = 0; i < five.length; i++) {
+  let answer = five[i].map(num=>Math.pow(2,num));
+  array.push(answer);
+}
+return array;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 
@@ -143,7 +150,10 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-  // Solution code here...
+  const gendersOfCharacters = data.filter(character => {
+    return character.gender === 'female' || character.gender === 'male'
+  }).map(character => character.name).join(' and ');
+  return gendersOfCharacters;
 };
 
 /* ------------------------------------------------------------------------------------------------
