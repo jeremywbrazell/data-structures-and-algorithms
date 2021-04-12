@@ -57,6 +57,7 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
+
   let flatArray = input.flat();
   let sum = 0;
   for (let i = 0; i < flatArray.length; i++) {
@@ -64,6 +65,7 @@ const totalSum = (input) => {
   }
   return sum;
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -77,6 +79,7 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
+
   let array = []
   function rule(item) {return typeof(item) === 'number' && item%5===0}
   let five = input.map(num => num.filter(rule))
@@ -91,7 +94,6 @@ const divisibleByFiveTwoToThePower = (input) => {
 
 
 // };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 
 
@@ -155,10 +157,12 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
+
   const genderedStarWars = data.filter(character => {
     return character.gender === 'female' || character.gender === 'male'
   }).map(character => character.name).join(' and ');
   return genderedStarWars;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
