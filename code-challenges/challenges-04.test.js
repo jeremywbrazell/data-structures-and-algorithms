@@ -7,12 +7,13 @@ Write a function called addTwo that takes in an array and adds two to every valu
 ------------------------------------------------------------------------------------------------ */
 
 const addTwo = (arr) => {
-  for (let index = 0; index < array.length; index+2) {
-const newArray = arr.push
-return newArray;
-    
+  let array = [];
+  for(let i = 0; i < arr.length; i++) {
+    arr.push(arr[i] + 2);
   }
+  return array;
 }
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -24,8 +25,8 @@ Write a function named containsW that takes in a string. This function should us
 const containsW = (str) => {
   let regex = /w/gm;
   return regex.test(str);
-  
-  }
+
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -40,7 +41,9 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+  let regex = /\d/gm;
+  let answer = regex.test(input);
+  return answer;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,8 +54,11 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
-  // Solution code here...
+  let regexfive = /world/gm;
+  let answer = regexfive.test(input);
+  return answer;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -63,7 +69,9 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let regex = /\b[A-Z][a-z]+/g;
+  let answer = str.match(regex);
+  return answer || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,7 +81,14 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  let regex = /^[A-Z]\w/;
+  let answer = [];
+  arr.forEach(str => {
+    if (regex.test(str)) {
+      answer.push(str);
+    }
+  });
+  return answer;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -140,13 +155,9 @@ const findShells = (str) => {
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
-
 All the code below will verify that your functions are working to solve the challenges.
-
 DO NOT CHANGE any of the below code.
-
 Run your tests from the console: jest challenges-04.solution.test.js
-
 ------------------------------------------------------------------------------------------------ */
 describe('Testing challenge 1', () => {
   test('It should add two to every value', () => {
