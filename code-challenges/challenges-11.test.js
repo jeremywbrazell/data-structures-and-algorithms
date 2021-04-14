@@ -12,7 +12,8 @@ Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
-  return people.map(x => {return x.firstname + ' ' + x.lastname}) 
+  return people.map((x) => 
+  x.firstName + ' ' + x.lastName) 
   }
 
 
@@ -53,7 +54,9 @@ If it does, return true. If not, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const hasNumber = (string) => {
-  // Solution code here...
+  let regex = /[a-z]+[0-9]+/gm;
+  let theAnswer = regex.test(string);
+  return theAnswer;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,7 +76,8 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  // Solution code here...
+  let regexAnswer = /^[a-z0-9]+(\.[a-z0-9]+)?@[a-z0-9]*\.((net)|(com)|(org))$/;
+  return regexAnswer.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -98,7 +102,8 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
-  // Solution code here...
+  let regexAnswer = /^(\((\d{3})\)[\s]?|(\d{3})[\s-]?)(\d{3})[\s-]?(\d{4})$/;
+  return regexAnswer.test(phoneNumber);
 };
 
 /* ------------------------------------------------------------------------------------------------
