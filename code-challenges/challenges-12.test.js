@@ -15,8 +15,8 @@ const maxInArray = (arr) => {
   return max;
 };
 
- 
-  
+
+
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -82,9 +82,18 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-
-    
+  let array = [];
+  for (let i = 0; i < stores[0].length; i++) {
+    let count = 0;
+    for (let j = 0; j < stores.length; j++) {
+      count += stores[j][i];
+    }
+    array.push(count);
   }
+  return array;
+}
+
+
 
 
 
@@ -100,7 +109,12 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  let salesArray = [];
+  hours.forEach(value => {
+    let hoursIndex = hours.indexOf(value);
+    salesArray.push({ sales: `${data[hoursIndex]} cookies`, time: hours[hoursIndex]});
+  });
+  return salesArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -125,7 +139,7 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+ 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -241,13 +255,13 @@ describe('Testing challenge 1', () => {
 
 describe('Testing challenge 2', () => {
   test('It should return the max value', () => {
-    expect(findMax([[13,24,24,2], [2,5,6], [2,3]])).toStrictEqual(24);
+    expect(findMax([[13, 24, 24, 2], [2, 5, 6], [2, 3]])).toStrictEqual(24);
   });
 });
 
 describe('Testing challenge 3', () => {
   test('It should return the total sum', () => {
-    expect(totalSum([[13,24,24,2], [2,5,6], [2,3]])).toStrictEqual(81);
+    expect(totalSum([[13, 24, 24, 2], [2, 5, 6], [2, 3]])).toStrictEqual(81);
     expect(totalSum([])).toStrictEqual(0);
   });
 });
