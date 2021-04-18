@@ -11,7 +11,12 @@ Write a function named screenForNames that takes in an array of strings and uses
 ------------------------------------------------------------------------------------------------ */
 
 const screenForNames = (arr) => {
-  // Solution code here...
+  let regex = /^Mr./ || /^Mrs./ || /^Ms./ || /^Dr./;
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArray.push(regex);
+  }
+  return newArray.join();
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -23,7 +28,12 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 ------------------------------------------------------------------------------------------------ */
 
 const toTitleCase = (arr) => {
-  // Solution code here...
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++){
+    let upperCase = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    newArray.push(upperCase);
+  }
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -98,7 +108,11 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (arr) => {
-  // Solution code here...
+  const biggerCharacters = arr.filter(character => {
+    return character.mass === '190' ||
+    character.mass === '136'
+  }).map(character => character.name).join(' - ');
+  return biggerCharacters
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,7 +130,7 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => property(a.price) > property(b.price) ? 1 : -1)[0].arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -132,8 +146,14 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-  // Solution code here...
-};
+  for (let i = 0; i < url.length; i++) {
+  }
+  if (url.includes('https://')) {
+    return (true);
+  } else  {
+    return (false);
+  }
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 
