@@ -82,14 +82,20 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  let totalArray = [0,0,0,0,0,0,0,0,0,0,0,0];
-  for (let i = 0; i < stores.length; i++) {
-    for (let j = 0; j < stores[i].length; j++) {
-      totalArray[j] += stores[i][j];
+review
+  let array = [];
+  for (let i = 0; i < stores[0].length; i++) {
+    let count = 0;
+    for (let j = 0; j < stores.length; j++) {
+      count += stores[j][i];
     }
+    array.push(count);
   }
-  return totalArray;
-};
+  return array;
+}
+
+
+
 
 
 
@@ -105,12 +111,14 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  let array = [];
-  hours.forEach((value, i) => {
-    array.push({ sales: `${data[i]} cookies`, time: hours[i]});
+
+  let salesArray = [];
+  hours.forEach(value => {
+    let hoursIndex = hours.indexOf(value);
+    salesArray.push({ sales: `${data[hoursIndex]} cookies`, time: hours[hoursIndex]});
   });
-  return array;
-};
+  return salesArray;
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -134,6 +142,7 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
+
   let amount = 0;
   arr.forEach(obj => {
     if(obj.store === 'Pet store'){
@@ -145,6 +154,7 @@ const howManyTreats = (arr) => {
     }
   });
   return amount;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
