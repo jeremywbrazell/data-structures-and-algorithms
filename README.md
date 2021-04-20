@@ -1,4 +1,4 @@
-[Shift Array](./shift-array.js)
+[Shift Array](javascript/code-challenges/arrayShift/array-shift.js)
 
 # Challenge Summary
 Code challenge to insert value into middle of array.
