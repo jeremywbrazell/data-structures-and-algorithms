@@ -1,3 +1,18 @@
+[Shift Array](./shift-array.js)
+
+# Challenge Summary
+Code challenge to insert value into middle of array.
+
+## Challenge Description
+Without using built in methods, insert a value into the middle of an array.
+
+## Approach & Efficiency
+I used splice to add to middle of array, but, first had to figure out how to create a value for the middle of it to insert into.
+
+## Solution
+![](cc2wb.png)
+
+
 # Data Structures and Algorithms
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
