@@ -10,7 +10,21 @@ Without using built in methods, insert a value into the middle of an array.
 I used splice to add to middle of array, but, first had to figure out how to create a value for the middle of it to insert into.
 
 ## Solution
-![](cc2wb.png)
+![](javascript/code-challenges/cc2wb.png)
+
+[Array Binary](javascript/code-challenges/arrayBinarySearch/array-binary-search.js)
+
+# Challenge Summary
+eturn index of sorted array's element that is equal to search key.
+
+## Challenge Description
+Return index of sorted array's element that is equal to search key, or -1 if element doesn't exist.
+
+## Approach & Efficiency
+Used a function to declare beginning and end of sorted array (-1 if end of array because index begins at 0).  Built an if else statement that divides the array in half and creates a conditiona that says if key is greater than middle, remove what's on left so that function continues searching on right and vice versa if it's less than.
+
+## Solution
+![](javascript/code-challenges/array-binary.png)
 
 
 # Data Structures and Algorithms
