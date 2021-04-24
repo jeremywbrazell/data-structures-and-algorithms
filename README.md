@@ -12,6 +12,8 @@ I used splice to add to middle of array, but, first had to figure out how to cre
 ## Solution
 ![](javascript/code-challenges/cc2wb.png)
 
+=====================================================================
+
 [Array Binary](javascript/code-challenges/arrayBinarySearch/array-binary-search.js)
 
 # Challenge Summary
@@ -26,6 +28,21 @@ Used a function to declare beginning and end of sorted array (-1 if end of array
 ## Solution
 ![](javascript/code-challenges/array-binary.png)
 
+=====================================================================
+
+# Singly Linked List
+Create a node class that has properties for the value stored in the Node.
+
+## Challenge
+<!-- Description of the challenge -->
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+## API
+<!-- Description of each method publicly available to your Linked List -->
+
+=====================================================================
 
 # Data Structures and Algorithms
 
