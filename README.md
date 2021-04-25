@@ -34,13 +34,19 @@ Used a function to declare beginning and end of sorted array (-1 if end of array
 Create a node class that has properties for the value stored in the Node.
 
 ## Challenge
-<!-- Description of the challenge -->
+Define a method called insert which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
+Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Looked up what "append" does and discovered that it means to put nodes at the end.
 
 ## API
-<!-- Description of each method publicly available to your Linked List -->
+**Insert**
+- if head doesn't exist, set node to head
+- if head does exist, let the current node be the head
+- traverse the linked list with the while loop
+- when traverse is complete, current.next will set the node as the next value
+- at the end, return this to return the whole list
 
 =====================================================================
 
