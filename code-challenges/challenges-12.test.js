@@ -82,7 +82,6 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-review
   let array = [];
   for (let i = 0; i < stores[0].length; i++) {
     let count = 0;
