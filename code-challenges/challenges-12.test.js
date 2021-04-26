@@ -118,7 +118,7 @@ const salesData = (hours, data) => {
     salesArray.push({ sales: `${data[hoursIndex]} cookies`, time: hours[hoursIndex]});
   });
   return salesArray;
-
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
