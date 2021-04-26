@@ -17,7 +17,7 @@ I used splice to add to middle of array, but, first had to figure out how to cre
 [Array Binary](javascript/code-challenges/arrayBinarySearch/array-binary-search.js)
 
 # Challenge Summary
-eturn index of sorted array's element that is equal to search key.
+Return index of sorted array's element that is equal to search key.
 
 ## Challenge Description
 Return index of sorted array's element that is equal to search key, or -1 if element doesn't exist.
@@ -28,6 +28,22 @@ Used a function to declare beginning and end of sorted array (-1 if end of array
 ## Solution
 ![](javascript/code-challenges/array-binary.png)
 
+
+# Challenge Summary
+Linked List Insertions
+
+## Challenge Description
+.append(value) which adds a new node with the given value to the end of the list
+
+## Approach & Efficiency
+I used the same formula as I did for insert and wrote similar tests.
+
+## Solution
+![append](javascript/code-challenges/append.png.jpg)
+
+//==============================================================================================================================================//
+
+=======
 =====================================================================
 
 # Singly Linked List
@@ -49,6 +65,7 @@ Looked up what "append" does and discovered that it means to put nodes at the en
 - at the end, return this to return the whole list
 
 =====================================================================
+
 
 # Data Structures and Algorithms
 
