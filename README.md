@@ -12,6 +12,8 @@ I used splice to add to middle of array, but, first had to figure out how to cre
 ## Solution
 ![](javascript/code-challenges/cc2wb.png)
 
+=====================================================================
+
 [Array Binary](javascript/code-challenges/arrayBinarySearch/array-binary-search.js)
 
 # Challenge Summary
@@ -26,6 +28,27 @@ Used a function to declare beginning and end of sorted array (-1 if end of array
 ## Solution
 ![](javascript/code-challenges/array-binary.png)
 
+=====================================================================
+
+# Singly Linked List
+Create a node class that has properties for the value stored in the Node.
+
+## Challenge
+Define a method called insert which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
+Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+
+## Approach & Efficiency
+Looked up what "append" does and discovered that it means to put nodes at the end.
+
+## API
+**Insert**
+- if head doesn't exist, set node to head
+- if head does exist, let the current node be the head
+- traverse the linked list with the while loop
+- when traverse is complete, current.next will set the node as the next value
+- at the end, return this to return the whole list
+
+=====================================================================
 
 # Data Structures and Algorithms
 
