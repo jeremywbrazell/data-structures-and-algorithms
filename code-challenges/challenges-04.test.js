@@ -81,7 +81,7 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  let regex = /^[A-Z]\w/;
+  let regex = /^[A-J]\w+/;
   let answer = [];
   arr.forEach(str => {
     if (regex.test(str)) {
