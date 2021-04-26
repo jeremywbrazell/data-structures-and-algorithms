@@ -151,14 +151,14 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     let objectValues = Object.values(arr[i]);
     let characterName = objectValues[0];
     if ( characterName === character) {
       return objectValues[2].length === 0 ? false : true;
     }
-    return false;
   }
+  return false;
 
 };
 
