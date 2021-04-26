@@ -9,7 +9,7 @@ Write a function called addTwo that takes in an array and adds two to every valu
 const addTwo = (arr) => {
   let array = [];
   for(let i = 0; i < arr.length; i++) {
-    arr.push(arr[i] + 2);
+    array.push(arr[i] + 2);
   }
   return array;
 }
@@ -81,7 +81,7 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  let regex = /^[A-Z]\w/;
+  let regex = /^[A-J]\w+/;
   let answer = [];
   arr.forEach(str => {
     if (regex.test(str)) {
