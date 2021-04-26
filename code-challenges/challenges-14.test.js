@@ -11,12 +11,14 @@ Write a function named screenForNames that takes in an array of strings and uses
 ------------------------------------------------------------------------------------------------ */
 
 const screenForNames = (arr) => {
-  let regex = /^Mr./ || /^Mrs./ || /^Ms./ || /^Dr./;
+  let regex = /^(Mr\.|Mrs\.|Ms\.|Dr\.) [a-zA-z]+/;
   let newArray = [];
   for (let i = 0; i < arr.length; i++) {
-    newArray.push(regex);
+    if (regex.test(arr[i])) {
+      newArray.push(arr[i])
+    }
   }
-  return newArray.join();
+  return newArray;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -29,7 +31,7 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 
 const toTitleCase = (arr) => {
   let newArray = [];
-  for (let i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     let upperCase = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
     newArray.push(upperCase);
   }
@@ -110,7 +112,7 @@ let starWarsData = [{
 let biggerThanLuke = (arr) => {
   const biggerCharacters = arr.filter(character => {
     return character.mass === '190' ||
-    character.mass === '136'
+      character.mass === '136'
   }).map(character => character.name).join(' - ');
   return biggerCharacters
 };
@@ -130,7 +132,7 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  return arr.sort((a, b) => property(a.price) > property(b.price) ? 1 : -1)[0].arr;
+  return arr.sort((a, b) => a[property] > b[property] ? 1 : -1);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -150,7 +152,7 @@ const isSecure = (url) => {
   }
   if (url.includes('https://')) {
     return (true);
-  } else  {
+  } else {
     return (false);
   }
 }
@@ -175,7 +177,56 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  if (board[0][0] === '0' && board[0][1] === '0' && board[0][2] === 'O') {
+    return true;
+  }
+  if (board[1][0] === '0' && board[1][1] === '0' && board[1][2] === 'O') {
+    return true;
+  }
+  if (board[2][0] === '0' && board[2][1] === '0' && board[2][2] === 'O') {
+    return true;
+  }
+  if (board[0][0] === 'X' && board[0][1] === 'X' && board[0][2] === 'X') {
+    return true;
+  }
+  if (board[1][0] === 'X' && board[1][1] === 'X' && board[1][2] === 'X') {
+    return true;
+  }
+  if (board[2][0] === 'X' && board[2][1] === 'X' && board[2][2] === 'X') {
+    return true;
+  }
+  if (board[0][0] === '0' && board[1][0] === '0' && board[2][0] === 'O') {
+    return true;
+  }
+  if (board[0][1] === '0' && board[1][1] === '0' && board[2][1] === 'O') {
+    return true;
+  }
+  if (board[0][2] === '0' && board[1][2] === '0' && board[2][2] === 'O') {
+    return true;
+  }
+  if (board[0][0] === 'X' && board[1][0] === 'X' && board[2][0] === 'X') {
+    return true;
+  }
+  if (board[0][1] === 'X' && board[1][1] === 'X' && board[2][1] === 'X') {
+    return true;
+  }
+  if (board[0][2] === 'X' && board[1][2] === 'X' && board[2][2] === 'X') {
+    return true;
+  }
+  if (board[0][0] === 'X' && board[1][1] === 'X' && board[2][2] === 'X') {
+    return true;
+  }
+  if (board[2][0] === 'X' && board[1][1] === 'X' && board[0][2] === 'X') {
+    return true;
+  }
+  if (board[0][0] === 'O' && board[1][1] === 'O' && board[2][2] === 'O') {
+    return true;
+  }
+  if (board[2][0] === 'O' && board[1][1] === 'O' && board[0][2] === 'O') {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
