@@ -7,7 +7,7 @@ Write a function named addAnimal that takes in array of animals (strings) and so
 
 This function should first create a new array. Then iterate over the input array and modify each value based on the callback function provided.
 
-Push each updated animal string into the new array. Return the new array. 
+Push each updated animal string into the new array. Return the new array..
 
 HINT: Look at the tests to see how the callback functions are used.
 

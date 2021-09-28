@@ -6,7 +6,7 @@ CHALLENGE 1 - Review
 Write a function named screenForNames that takes in an array of strings and uses Regex to create a new array of only those strings that match the following rules:
 
 * the name must begin with Mr., Mrs., Ms., Dr. followed by a space
-* the name must contain only letter characters (white spaces are ok)
+* the name must contain only letter characters (white spaces are ok).
 
 ------------------------------------------------------------------------------------------------ */
 

@@ -9,7 +9,7 @@ Each object will have the shape {firstName:string, lastName:string}
 E.g. [ { firstName:"Jane", lastName:"Doe" }, { firstName:"James", lastName:"Bond"}]
 should convert to ["Jane Doe", "James Bond"]
 Note the space in between first and last names.
-You can assume that neither firstName nor lastName will be blank
+You can assume that neither firstName nor lastName will be blank.
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
   return people.map(x => {return x.firstname + ' ' + x.lastname}) 

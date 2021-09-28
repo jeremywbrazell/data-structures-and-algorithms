@@ -3,7 +3,7 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function named transformToLis that, given an object, returns an array of the key value pairs as html list items.
+Write a function named transformToLis that, given an object, returns an array of the key value pairs as html list items..
 
 For example: 
 {

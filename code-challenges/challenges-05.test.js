@@ -3,7 +3,7 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function called sortStarWarsCharacters that sorts the characters in the starWarsPeople array by height from tallest to shortest.
+Write a function called sortStarWarsCharacters that sorts the characters in the starWarsPeople array by height from tallest to shortest..
 ------------------------------------------------------------------------------------------------ */
 
 let starWarsPeople = [
