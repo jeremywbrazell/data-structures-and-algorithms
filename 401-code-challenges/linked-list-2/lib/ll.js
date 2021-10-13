@@ -26,7 +26,7 @@ class LinkedList {
     return this;
   }
 
-  insertAfter(value) {
+  insert(value) {
     // instantiate a new node to add to our LL
     let node = new Node(value);
 
@@ -35,14 +35,10 @@ class LinkedList {
       this.head = node;
       // otherwise, point current to head
     } else {
-      let currentNode = this.head;
+      // any additional insertions become the head
+      node.next = this.head;
 
-      while (currentNode.next) {
-        // this is the actual traversal
-        currentNode = currentNode.next;
-      }
-      // this is the insertion
-      currentNode.next = node;
+      this.head = node;
     }
     return this;
   }
@@ -65,8 +61,8 @@ class LinkedList {
   toString() {
     // declare the head
     let current = this.head;
-    let string = '';
-    let stringVal = `${current.value + '->' + current.next.value + 'NULL'}`;
+    let string = [];
+    let stringVal = `${ '{' + current.value + '}' + '->' + '{' + current.next.value + '}' + '->' + 'NULL'}`;
     // traverse through while loop and grab val from each node and push to string
     while (current.next) {
       current = current.next;
