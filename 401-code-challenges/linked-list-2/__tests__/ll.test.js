@@ -57,7 +57,7 @@ describe('Linked List', () => {
     expect(list.head.value).toEqual(20);
   });
   //==================================================
-  it('should add multiple nodes to the LL', () => {
+  it('should convert node values to a string', () => {
     let list = new LL();
     let first = 10;
     let second = 20;
