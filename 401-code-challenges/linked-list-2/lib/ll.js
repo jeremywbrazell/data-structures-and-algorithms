@@ -7,36 +7,38 @@ class LinkedList {
     this.head = null;
   }
   append(value) {
-    let node = new Node(value); //instantiate new node
-
+    //instantiate new node
+    let node = new Node(value);
+    //if no head, create one as first node
     if (!this.head) {
-      //if no head, create one as first node
       this.head = node;
       return this;
     }
 
-    let currentNode = this.head; // point current node to head
+    // point current node to head
+    let currentNode = this.head;
     while (currentNode.next) {
-      currentNode = currentNode.next; // traverse to end of LL
+      // traverse to end of LL
+      currentNode = currentNode.next;
     }
-    currentNode.next = node; // append with new node at end
+    // append with new node at end
+    currentNode.next = node;
     return this;
   }
 
-  insertAfter(value) {
+  insert(value) {
     // instantiate a new node to add to our LL
     let node = new Node(value);
 
+    // if no head, create one
     if (!this.head) {
-      this.head = node; // if no head, create one
+      this.head = node;
+      // otherwise, point current to head
     } else {
-      let currentNode = this.head; // otherwise, point current to head
+      // any additional insertions become the head
+      node.next = this.head;
 
-      while (currentNode.next) {
-        // this is the actual traversal
-        currentNode = currentNode.next; // this moves you along in your traversal
-      }
-      currentNode.next = node; // this is the insertion
+      this.head = node;
     }
     return this;
   }
@@ -46,31 +48,30 @@ class LinkedList {
 
     while (thisNode) {
       if (thisNode.value === value) {
-        return thisNode; // if there is a value, return node
+        // if there is a value, return node
+        return thisNode;
       }
-
-      thisNode = thisNode.next; // otherwise, traverse the LL.
+      // otherwise, traverse the LL
+      thisNode = thisNode.next;
     }
 
     return thisNode;
   }
 
   toString() {
+    // declare the head
     let current = this.head;
-    let string = '';
-    let stringVal = `${(current.value) + '->' + (current.next.value) + 'NULL'}`;
+    let string = [];
+    let stringVal = `${ '{' + current.value + '}' + '->' + '{' + current.next.value + '}' + '->' + 'NULL'}`;
+    // traverse through while loop and grab val from each node and push to string
     while (current.next) {
       current = current.next;
     }
     string.push(stringVal);
     console.log('this is the string', string);
+    // return string w/ all node values
     return string;
   }
-  // declare the head
-  // declare current = head
-  // declare string
-  // traverse through while loop and grab val from each node and push to string
-  // return string w/ all node values
 }
 
 module.exports = LinkedList;
