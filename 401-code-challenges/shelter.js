@@ -5,23 +5,28 @@ class AnimalShelter {
     this.queue = [];
   }
 
-  enqueue(cat) {
-    this.queue.push(cat);
+  enqueue(animal) {
+    this.queue.push(animal);
   }
 
-  dequeue(cat) {
-    while (this.queue.length !== 0) {
-      let preference = this.queue.shift(cat);
+  dequeue(animal) {
+    for (let i = 0; i < queue[animal].length; i++) {
+      if (animal === { cat }) {
+        preference.push(this.queue.shift(animal));
+      } else {
+        return null;
+      }
       return preference;
     }
-
   }
 }
 
+
+
 let testAnimalShelter = new AnimalShelter();
 
-testAnimalShelter.enqueue('Sokka');
-testAnimalShelter.enqueue('Yuna');
-testAnimalShelter.enqueue('Ripley');
-testAnimalShelter.dequeue();
+testAnimalShelter.enqueue('cat');
+// testAnimalShelter.enqueue('Yuna');
+// testAnimalShelter.enqueue('Ripley');
+// testAnimalShelter.dequeue();
 console.log(testAnimalShelter);
