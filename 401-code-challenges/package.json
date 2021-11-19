@@ -1,0 +1,12 @@
+{
+  "name": "401-code-challenges",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tree-max.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
