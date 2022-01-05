@@ -32,4 +32,4 @@ The algorithm works in **8 steps** until the entire array is sorted numerically:
 
 
 
-[Ref](https://www.baeldung.com/cs/quicksort-vs-heapsort)
+[Ref](https://medium.com/karuna-sehgal/a-quick-explanation-of-quick-sort-7d8e2563629b)
